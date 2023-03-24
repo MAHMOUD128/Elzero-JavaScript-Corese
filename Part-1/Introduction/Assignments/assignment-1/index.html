@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+    <script>
+        /*
+            * this is not work, becouse you select element before read it in the page 
+        */
+      // Code One
+      document.getElementById("el").style.color = "red";
+    </script>
+    <script>
+        /*
+            * this is work good, becouse when page load , it can now read html element and can select it
+        */
+      // Code Two
+      window.onload = function () {
+        document.getElementById("el").style.color = "red";
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="el">Page Title</h1>
+    <script>
+        /*
+            * this is work good, becouse it can select after it read all element in the page  
+        */
+      // Code Three
+      document.getElementById("el").style.color = "green";
+    </script>
+  </body>
+</html>
